@@ -60,6 +60,17 @@ Listening to MIDI input. Press Enter to exit.
 
 ...
 ```
+如果出现了下面的情况，请查看设备是否被占用：
+```bash
+Available MIDI input ports: (Enter the index of your device)
+0: MPK mini 3 0
+1: loopMIDI Port 1
+0
+
+MidiInWinMM::openPort: error creating Windows MM MIDI input port.
+
+Error: MidiInWinMM::openPort: error creating Windows MM MIDI input port.
+```
 
 ## 贡献
 
