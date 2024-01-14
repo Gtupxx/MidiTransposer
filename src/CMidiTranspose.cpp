@@ -138,12 +138,9 @@ void CMidiTranspose::SelectPort()
 {
     try
     {
-        // Create RtMidiIn and RtMidiOut objects
-        RtMidiIn midiIn;
-        RtMidiOut virtualMidiOut;
         // Get available input and output ports
-        unsigned int numInputPorts = midiIn.getPortCount();
-        unsigned int numOutputPorts = virtualMidiOut.getPortCount();
+        unsigned int numInputPorts = m_MidiIn.getPortCount();
+        unsigned int numOutputPorts = m_MidiOut.getPortCount();
 
         // Check if there are available input and output ports
         if (numInputPorts == 0 || numOutputPorts == 0)
@@ -156,11 +153,11 @@ void CMidiTranspose::SelectPort()
         std::cout << "Available MIDI input ports: (Enter the index of your device)" << std::endl;
         for (unsigned int i = 0; i < numInputPorts; ++i)
         {
-            std::cout << i << ": " << midiIn.getPortName(i) << std::endl;
+            std::cout << i << ": " << m_MidiIn.getPortName(i) << std::endl;
         }
 
         // Open the first available input ports
-        int in = numInputPorts;
+        unsigned int in = numInputPorts;
         while (in >= numInputPorts)
         {
             std::cin >> in;
@@ -171,11 +168,11 @@ void CMidiTranspose::SelectPort()
         std::cout << "Available MIDI output ports: (Enter the index of the virtual output)" << std::endl;
         for (unsigned int i = 0; i < numOutputPorts; ++i)
         {
-            std::cout << i << ": " << virtualMidiOut.getPortName(i) << std::endl;
+            std::cout << i << ": " << m_MidiOut.getPortName(i) << std::endl;
         }
 
         // Open the first available output ports
-        int out = numOutputPorts;
+        unsigned int out = numOutputPorts;
         while (out >= numOutputPorts)
         {
             std::cin >> out;
