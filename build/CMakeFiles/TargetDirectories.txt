@@ -1,3 +1,0 @@
-D:/Users/Gtup/Desktop/MidiTransposer/build/CMakeFiles/MidiTransposer.dir
-D:/Users/Gtup/Desktop/MidiTransposer/build/CMakeFiles/ALL_BUILD.dir
-D:/Users/Gtup/Desktop/MidiTransposer/build/CMakeFiles/ZERO_CHECK.dir
