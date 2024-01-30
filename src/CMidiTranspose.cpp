@@ -1,3 +1,12 @@
+/*
+ * @Author: 柚岩龙蜥
+ * @Date: 2024-01-14 23:01:29
+ * @LastEditors: 柚岩龙蜥
+ * @LastEditTime: 2024-01-31 01:56:46
+ * @FilePath: \MidiTransposer\src\CMidiTranspose.cpp
+ * @Description:  
+ * 
+ */
 #include <iostream>
 #include <rtmidi/RtMidi.h>
 #include "CMidiTranspose.h"
